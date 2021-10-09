@@ -38,6 +38,12 @@ try:
     bianchi.resetGear((input('Would you like to reset the gear back to 1, "Yes" or "No?" ')))
     print()
     
+    print(f"The number of gears my bike has is {orbea.getNumberOfGears()}")
+    print(f"The number of wheels my bike has is {orbea.getNumberOfWheels()}")
+    print(f"The current gear my bike is in is {orbea.getCurrentGear()}")
+    print(f"My bike has {orbea.getBrakeType()}")
+    input("Press [ENTER] to finish \n")
+    
     print("FINISHED")
 
 except Exception as e:
