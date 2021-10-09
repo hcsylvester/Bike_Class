@@ -1,8 +1,19 @@
+# Hunter C. Sylvester
+# Purpose: This tests my Bike class using different inputs and values
+
+# Import our bike class
 from bike import Bike
 
+
+###############################################
+# Instantiate a Bike object
+###############################################
 try:
+    # Bianchi
     bianchi = Bike(19, 2, 9, "hand brakes")
 
+    # Orbea
+    # Now, instantiating a Bike object with no information initially.  You can change values below
     orbea = Bike()
     orbea.setNumberOfGears(10)
     orbea.setNumberOfWheels(4)
@@ -14,13 +25,19 @@ try:
     print(f"The current gear my bike is in is {bianchi.getCurrentGear()}")
     print(f"My bike has {bianchi.getBrakeType()}")
     input("Press [ENTER] to continue \n")
-
+    
+    # Increase Gear by 1
     bianchi.increaseGear((input('Would you like to increase the gear, "Yes" or "No?" ')))
     print()
+    
+    # Decrease Gear by 1
     bianchi.decreaseGear((input('Would you like to decrease the gear, "Yes" or "No?" ')))
     print()
+    
+    # Reset Gear to 1
     bianchi.resetGear((input('Would you like to reset the gear back to 1, "Yes" or "No?" ')))
     print()
+    
     print("FINISHED")
 
 except Exception as e:
